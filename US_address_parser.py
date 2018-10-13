@@ -12,6 +12,9 @@ def parse_address(address):
             l.append((address, 'Address'))
             l2 = [(t[1],t[0].strip(',')) if type(t[0]) is not list else (t[1],t[0]) for t in l]
             address_out = dict(l2)
-            if address_out['StateName'] and len(address_out['StateName']) == 2:
-                address_out['StateName'] = states[address_out['StateName']]
+            try:
+                if address_out['StateName'] and len(address_out['StateName']) == 2:
+                    address_out['StateName'] = states[address_out['StateName']]
+            except KeyError:
+                address_out = {}
     return address_out
