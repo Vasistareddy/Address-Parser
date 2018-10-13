@@ -20,4 +20,4 @@
 	- parse_address("455 North 3rd 190 Arizona Center,Phoenix, AZ 85004")
 
 # GET API Call
-	- http://172.16.237.232:9006/usparse?text=455%20North%203rd%20190%20Arizona%20Center,Phoenix,%20AZ%2085040
+	- http://localhost:9006/usparse?text=455%20North%203rd%20190%20Arizona%20Center,Phoenix,%20AZ%2085040
