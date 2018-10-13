@@ -1,8 +1,14 @@
+**For now we are parsing US-Addresses only**
+
+# Description
+
 **To parse the US addresses**
 
 **To map the state code(AZ) to state name(Arizona)**
 
 **To skip the other country addresses**
+
+**Some additional keys are added to the output of *usaddress* python module**
 
 # Methods
 	- parse_address
