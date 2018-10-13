@@ -15,4 +15,4 @@ def address_api():
         return make_response(jsonify({'error':'sorry! unable to parse', 'status_code':500}), 500)
 
 if __name__ == '__main__':
-   app.run(host='0.0.0.0', port=9006, debug=False)
+   app.run(port=9006, debug=False)
