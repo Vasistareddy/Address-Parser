@@ -14,7 +14,9 @@ def parse_address(address):
             address_out = dict(l2)
             try:
                 if address_out['StateName'] and len(address_out['StateName']) == 2:
+                    address_out['StateCode'] = address_out['StateName']
                     address_out['StateName'] = states[address_out['StateName']]
+
             except KeyError:
                 address_out = {}
     return address_out
