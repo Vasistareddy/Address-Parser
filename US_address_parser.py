@@ -23,14 +23,12 @@ def parse_address(address: str) -> Dict[str, str]:
                     address_out['StateName'] = states[address_out['StateName'].upper()]
             except KeyError:
                 address_out = {}
-
-        matches = [city for city in cities if address_out['PlaceName'] in city]
-        if len(matches) == 1:
-            address_out['PlaceName'] = matches[0]
-        elif len(matches) > 1:
-            matches = re.findall(r'\w+[.][ ]{}'.format(address_out['PlaceName']), address, re.IGNORECASE)
-            address_out['PlaceName'] = matches[0] if matches else address_out['PlaceName']
+                
+        if 'PlaceName' in address_out and address_out['PlaceName']:
+            matches = [city for city in cities if address_out['PlaceName'] in city]
+            if len(matches) == 1:
+                address_out['PlaceName'] = matches[0]
+            elif len(matches) > 1:
+                matches = re.findall(r'\w+[.]{0,1}[ ]%s'%address_out['PlaceName'], address, re.IGNORECASE)
+                address_out['PlaceName'] = matches[0] if matches else address_out['PlaceName']
     return address_out
-
-if __name__ == '__main__':
-    print(parse_address(sys.argv[1]))
