@@ -1,6 +1,6 @@
 **For now we are parsing US-Addresses only**
 
-# Description
+# Project Description
 
 **To parse the US addresses**
 
@@ -8,7 +8,11 @@
 
 **To skip the other country addresses**
 
+**Parsing corrections in the city name(multiple word)**
+
 **Some additional keys are added to the output of *usaddress* python module**
+
+**List of States and Cities(multiple word :P ) are included in the code**
 
 # Methods
 	- parse_address
