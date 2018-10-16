@@ -18,7 +18,7 @@
 ```
 from US_address_parser import parse_address
 parse_address("455 North 3rd 190 Arizona Center,Phoenix, AZ 85004")
-from CANADA_address_parser import parse_address
+from canada_address_parser import parse_address
 parse_address('2620 32nd St. NE Calgary AB T1Y 6B8')
 ```
 
